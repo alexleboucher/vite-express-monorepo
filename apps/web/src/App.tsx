@@ -1,8 +1,15 @@
 import { useState, useEffect } from 'react';
-import './App.css';
+import { Workspace, User } from '@clapcorner/types';
 
 const App = () => {
   const [data, setData] = useState<Workspace[]>([])
+
+  const user: User = {
+    birthDate: 20230913,
+    name: 'Alex',
+  }
+
+  console.log(user);
 
   useEffect(() => {
     fetch('http://localhost:5000/workspaces')
@@ -14,7 +21,13 @@ const App = () => {
     <>
       <h1>Building a fullstack TypeScript project with Turborepo</h1>
       <h2>Workspaces</h2>
-      <pre>{JSON.stringify(data, null, 2)}</pre>
+      {data.map(d => (
+        <div style={{ marginBottom: '15px' }}>
+          <label>Name: {d.name}</label>
+          <br/>
+          <label>Version: {d.version}</label>
+        </div>
+      ))}
     </>
   )
 }

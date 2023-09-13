@@ -230,9 +230,9 @@
     source-map-support "^0.5.21"
 
 "@esbuild-kit/esm-loader@^2.6.1":
-  version "2.6.2"
-  resolved "https://registry.yarnpkg.com/@esbuild-kit/esm-loader/-/esm-loader-2.6.2.tgz#4b7a0d45c86973d9472a4e0b9ca4f92c087e0b96"
-  integrity sha512-fQ+HIAwSZkNDmqoR+pu2xEeBhuO1D3BKhokQejajbmyLlPKpGx/F292zABc9WGN63VJ4SRI58SicdDqa3VyV/w==
+  version "2.6.3"
+  resolved "https://registry.yarnpkg.com/@esbuild-kit/esm-loader/-/esm-loader-2.6.3.tgz#6983d5f05c97575697ba580d84cd7bfc18b83e48"
+  integrity sha512-lUziJdacVDQrg65DwQ+OOQR9B1LQE2/pY77H+oVT0KQDLtsT2XfbHz7O+f0zUvexSWPKxMXa8h4RXT5PFAlv/g==
   dependencies:
     "@esbuild-kit/core-utils" "^3.3.0"
     get-tsconfig "^4.7.0"
@@ -2202,11 +2202,6 @@ typescript@^5.0.2, typescript@^5.2.2:
   version "5.2.2"
   resolved "https://registry.yarnpkg.com/typescript/-/typescript-5.2.2.tgz#5ebb5e5a5b75f085f22bc3f8460fba308310fa78"
   integrity sha512-mI4WrpHsbCIcwT9cF4FZvr80QUeKvsUsUvKDoR+X/7XHQH98xYD8YHZg7ANtz2GtZt/CBq2QJ0thkGJMHfqc1w==
-
-"typing@workspace:^":
-  version "0.1.0"
-  resolved "https://registry.yarnpkg.com/typing/-/typing-0.1.0.tgz#6538264d61d2b62f2ce21396d465f3b4e07e2b6b"
-  integrity sha512-antNt1BsNNlHtvbbH+l3Of+N1LpYun1+E9HVx2DBMP9QC9nr5TjPIyJV5br68VkCm3ED9hFbGAOE4CexndRnGg==
 
 unpipe@1.0.0, unpipe@~1.0.0:
   version "1.0.0"
