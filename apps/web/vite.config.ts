@@ -4,7 +4,9 @@ import react from '@vitejs/plugin-react'
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [react()],
-  resolve: {
-    preserveSymlinks: true // need this to work in workspace
-  }
+  server: {
+    watch: {
+      usePolling: true,
+    },
+  },
 })

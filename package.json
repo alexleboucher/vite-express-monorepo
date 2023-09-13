@@ -6,6 +6,14 @@
   "workspaces": [
     "apps/*"
   ],
+  "scripts": {
+    "dev": "turbo run dev",
+    "type-check": "turbo run type-check",
+    "docker:up": "docker-compose up -d && yarn docker:shell",
+    "docker:down": "docker-compose down",
+    "docker:shell": "docker exec -it turbo sh",
+    "docker:build": "docker build -t vite_express_monorepo ."
+  },
   "devDependencies": {
     "turbo": "^1.10.13"
   }

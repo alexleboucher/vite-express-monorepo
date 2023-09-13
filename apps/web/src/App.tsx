@@ -12,7 +12,7 @@ const App = () => {
   console.log(user);
 
   useEffect(() => {
-    fetch('http://localhost:5000/workspaces')
+    fetch('http://localhost:8000/workspaces')
       .then((response) => response.json())
       .then(({ data }) => setData(data))
   }, [])
