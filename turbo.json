@@ -1,4 +1,5 @@
 {
+    "globalDotEnv": [".env"],
     "pipeline": {
         "dev": {
             "cache": false
@@ -8,7 +9,7 @@
         },
         "build": {
             "dependsOn": ["type-check"],
-            "outputs": ["dist/**"]
+            "outputs": ["build/**", "dist/**"]
         }
     }
 }

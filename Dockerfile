@@ -1,12 +1,14 @@
+FROM node:18-alpine AS base
+
 ## Temporary image only used to build server
-FROM node:18-alpine AS builder
+FROM base AS builder
 WORKDIR /app
 COPY . .
 RUN yarn install --frozen-lockfile
 RUN yarn build
 
 ## Optimized image used as server
-FROM node:18-alpine AS server
+FROM base AS server
 WORKDIR /app
 COPY --from=builder ./app/build ./build
 COPY package* ./

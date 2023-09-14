@@ -1,8 +1,9 @@
 import { useState, useEffect } from 'react';
+import axios from 'axios';
 import { Workspace, User } from '@clapcorner/types';
 
 const App = () => {
-  const [data, setData] = useState<Workspace[]>([])
+  const [serverHealth, setServerHealth] = useState<string>();
 
   const user: User = {
     birthDate: 20230913,
@@ -12,22 +13,15 @@ const App = () => {
   console.log(user);
 
   useEffect(() => {
-    fetch('http://localhost:8000/workspaces')
-      .then((response) => response.json())
-      .then(({ data }) => setData(data))
+    axios.get('http://localhost:8000/api/health')
+    .then(res => setServerHealth(res.data))
   }, [])
 
   return (
     <>
       <h1>Building a fullstack TypeScript project with Turborepo</h1>
       <h2>Workspaces</h2>
-      {data.map(d => (
-        <div style={{ marginBottom: '15px' }}>
-          <label>Name: {d.name}</label>
-          <br/>
-          <label>Version: {d.version}</label>
-        </div>
-      ))}
+      <label>{serverHealth}</label>
     </>
   )
 }

@@ -5,8 +5,8 @@ services:
     ports:
       - ${API_PORT}:${API_PORT}
       - ${WEB_PORT}:${WEB_PORT}
-    # depends_on:
-    #   - db
+    depends_on:
+      - db
     working_dir: /app
     volumes:
       - ./:/app
@@ -17,28 +17,28 @@ services:
     stdin_open: true 
     tty: true
 
-  # db:
-  #   container_name: postgres
-  #   image: postgres:15-alpine
-  #   ports:
-  #     - '${DB_HOST_PORT}:${DB_PORT}'
-  #   volumes:
-  #     - data:/var/lib/postgresql/data
-  #   environment:
-  #     - POSTGRES_PASSWORD=${DB_PASSWORD}
-  #     - POSTGRES_DB=${DB_NAME}
+  db:
+    container_name: postgres
+    image: postgres:15-alpine
+    ports:
+      - '${DB_HOST_PORT}:${DB_PORT}'
+    volumes:
+      - data:/var/lib/postgresql/data
+    environment:
+      - POSTGRES_PASSWORD=${DB_PASSWORD}
+      - POSTGRES_DB=${DB_NAME}
 
-  # db_test:
-  #   container_name: test_postgres
-  #   image: postgres:15-alpine
-  #   ports:
-  #     - '${TEST_DB_HOST_PORT}:${DB_PORT}'
-  #   volumes:
-  #     - data_test:/var/lib/postgresql/data
-  #   environment:
-  #     - POSTGRES_PASSWORD=${DB_PASSWORD}
-  #     - POSTGRES_DB=${TEST_DB_NAME}
+  db_test:
+    container_name: test_postgres
+    image: postgres:15-alpine
+    ports:
+      - '${TEST_DB_HOST_PORT}:${DB_PORT}'
+    volumes:
+      - data_test:/var/lib/postgresql/data
+    environment:
+      - POSTGRES_PASSWORD=${DB_PASSWORD}
+      - POSTGRES_DB=${TEST_DB_NAME}
 
-# volumes:
-#   data:
-#   data_test:
+volumes:
+  data:
+  data_test:

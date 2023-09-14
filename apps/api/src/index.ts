@@ -1,20 +1,19 @@
-import cors from 'cors'
-import express from 'express'
+import * as dotenv from 'dotenv';
+import 'reflect-metadata';
+dotenv.config();
 
-import { Workspace } from '@clapcorner/types';
+import createServer from './config/server';
+import { AppDataSource } from './data-source';
 
-const app = express()
-const port = 8000
+const host = process.env.HOST || '0.0.0.0';
+const port = process.env.API_PORT || '8080';
 
-app.use(cors({ origin: 'http://localhost:3000' }))
+const app = createServer();
 
-app.get('/workspaces', (_, response) => {
-  const workspaces: Workspace[] = [
-    { name: 'api', version: '1.0.0' },
-    { name: 'types', version: '1.0.0' },
-    { name: 'web', version: '1.0.1' },
-  ]
-  response.json({ data: workspaces })
-})
-
-app.listen(port, () => console.log(`Listening on http://localhost:${port}`))
+AppDataSource.initialize()
+    .then(() => {
+        app.listen({ host, port }, () => {
+            console.info(`⚡️ Server is running at http://${host}:${port}`);
+        });
+    })
+    .catch(console.error);
