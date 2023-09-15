@@ -5,13 +5,6 @@ import { Workspace, User } from '@clapcorner/types';
 const App = () => {
   const [serverHealth, setServerHealth] = useState<string>();
 
-  const user: User = {
-    birthDate: 20230913,
-    name: 'Alex',
-  }
-
-  console.log(user);
-
   useEffect(() => {
     axios.get('http://localhost:8000/api/health')
     .then(res => setServerHealth(res.data))
