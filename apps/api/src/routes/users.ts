@@ -1,8 +1,8 @@
-import express from 'express';
+import { Router } from 'express';
 
 import UsersController from '../controllers/users';
 
-const router = express.Router();
+const router = Router();
 
 router.route('/').post(UsersController.create);
 

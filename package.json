@@ -9,7 +9,9 @@
   ],
   "scripts": {
     "dev": "dotenv -- turbo run dev",
+    "build": "dotenv -- turbo run build",
     "type-check": "turbo run type-check",
+    "lint": "turbo run lint",
     "docker:up": "docker-compose up -d && yarn docker:shell",
     "docker:down": "docker-compose down",
     "docker:shell": "docker exec -it turbo sh",

@@ -41,6 +41,7 @@ export class User {
 
     verifyPassword(password: string) {
         const hash = bcrypt.hashSync(password, this.salt);
+
         return hash === this.hashPassword;
     }
 }

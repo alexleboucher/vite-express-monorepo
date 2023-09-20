@@ -1,9 +1,12 @@
-import * as dotenv from 'dotenv';
+/* eslint-disable no-console */
+
+import dotenv from 'dotenv';
 import 'reflect-metadata';
-dotenv.config();
 
 import createServer from './config/server';
 import { AppDataSource } from './data-source';
+
+dotenv.config();
 
 const host = process.env.HOST || '0.0.0.0';
 const port = process.env.API_PORT || '8080';

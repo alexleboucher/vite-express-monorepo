@@ -1,14 +1,11 @@
-import { NextFunction, Request, Response } from 'express';
-import createHttpError, { HttpError } from 'http-errors';
+import type { NextFunction, Request, Response } from 'express';
+import type { HttpError } from 'http-errors';
+import createHttpError from 'http-errors';
 import passport from 'passport';
 
-import { User } from '../../entities/user';
-import { AuthLoginBody, AuthLoginResponse } from '../../types/routes/auth';
+import type { User } from '../../entities/user';
+import type { AuthLoginBody, AuthLoginResponse } from '../../types/routes/auth';
 import { validateLoginBody } from './validators';
-
-interface TypedRequestBody<T> extends Request {
-    body: Partial<T>; // Use Partial to set all properties optional because we cannot be sure the client will send all required properties
-}
 
 const login = (
     req: TypedRequestBody<AuthLoginBody>,
@@ -16,11 +13,6 @@ const login = (
     next: NextFunction,
 ) => {
     validateLoginBody(req.body);
-
-    const a = true;
-    if (a) {
-        console.log('AAA')
-    }
 
     passport.authenticate(
         'local',
@@ -59,9 +51,7 @@ const logout = (
         if (err) {
             return next(err);
         }
-        req.session.destroy(() => {
-            return res.send();
-        });
+        req.session.destroy(() => res.send());
     });
 };
 

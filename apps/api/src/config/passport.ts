@@ -1,4 +1,4 @@
-import { Request } from 'express';
+import type { Request } from 'express';
 import passport from 'passport';
 import { Strategy as LocalStrategy } from 'passport-local';
 

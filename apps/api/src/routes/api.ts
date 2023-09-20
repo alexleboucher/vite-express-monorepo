@@ -1,10 +1,10 @@
-import express from 'express';
+import { Router } from 'express';
 import 'express-async-errors';
 
 import authRoutes from './auth';
 import usersRoutes from './users';
 
-const router = express.Router();
+const router = Router();
 
 router.use('/auth', authRoutes);
 router.use('/users', usersRoutes);
