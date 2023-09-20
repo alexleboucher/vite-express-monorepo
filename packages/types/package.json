@@ -6,8 +6,5 @@
   "license": "MIT",
   "scripts": {
     "type-check": "tsc --noEmit"
-  },
-  "devDependencies": {
-    "typescript": "^5.2.2"
   }
 }
