@@ -5,3 +5,10 @@ declare module 'express-serve-static-core' {
         user?: User;
     }
 }
+
+/**
+ * Interface used to type request body.
+ */
+interface TypedRequestBody<T> extends Request {
+    body: Partial<T>; // Use Partial to set all properties optional because we cannot be sure the client will send all required properties
+}

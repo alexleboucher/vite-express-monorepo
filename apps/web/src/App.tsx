@@ -1,6 +1,5 @@
 import { useState, useEffect } from 'react';
 import axios from 'axios';
-import { Workspace, User } from '@internal/types';
 
 const App = () => {
   const [serverHealth, setServerHealth] = useState<string>();
