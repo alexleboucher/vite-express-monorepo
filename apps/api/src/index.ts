@@ -1,11 +1,10 @@
-/* eslint-disable no-console */
-
 import dotenv from 'dotenv';
 import 'reflect-metadata';
 
 import createServer from './config/server';
 import { AppDataSource } from './data-source';
 
+// eslint-disable-next-line import/no-named-as-default-member
 dotenv.config();
 
 const host = process.env.HOST || '0.0.0.0';

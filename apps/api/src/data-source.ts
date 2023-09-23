@@ -2,6 +2,7 @@ import { DataSource } from 'typeorm';
 import dotenv from 'dotenv';
 import { join } from 'path';
 
+// eslint-disable-next-line import/no-named-as-default-member
 dotenv.config();
 
 export const AppDataSource = new DataSource({

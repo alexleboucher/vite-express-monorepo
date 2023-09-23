@@ -6,7 +6,7 @@ import {
     PrimaryGeneratedColumn,
     UpdateDateColumn,
 } from 'typeorm';
-import bcrypt from 'bcryptjs';
+import { hashSync, genSaltSync } from 'bcryptjs';
 
 @Entity()
 export class User {
@@ -35,12 +35,12 @@ export class User {
     salt!: string;
     
     setPassword(password: string) {
-        this.salt = bcrypt.genSaltSync(12);
-        this.hashPassword = bcrypt.hashSync(password, this.salt);
+        this.salt = genSaltSync(12);
+        this.hashPassword = hashSync(password, this.salt);
     }
 
     verifyPassword(password: string) {
-        const hash = bcrypt.hashSync(password, this.salt);
+        const hash = hashSync(password, this.salt);
 
         return hash === this.hashPassword;
     }
