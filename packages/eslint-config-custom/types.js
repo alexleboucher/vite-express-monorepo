@@ -17,9 +17,6 @@ module.exports = {
     },
   },
   env: { node: true, es2020: true },
-  ignorePatterns: ['build', '.eslintrc.js', 'src/migrations'],
-  rules: {
-    ...base.rules,
-    '@typescript-eslint/no-unused-vars': ['warn', { argsIgnorePattern: 'req|res|next|err' }],
-  }
+  ignorePatterns: ['.eslintrc.js'],
+  rules: base.rules,
 }

@@ -27,7 +27,7 @@ module.exports = {
     '@typescript-eslint/no-unnecessary-condition': 'warn',
     '@typescript-eslint/consistent-type-imports': ['error', { prefer: 'type-imports' }],
     '@typescript-eslint/no-floating-promises': 'error',
-    '@typescript-eslint/semi': ['error'],
+    '@typescript-eslint/semi': ['warn'],
     '@typescript-eslint/no-unused-vars': ['warn'],
     '@typescript-eslint/member-delimiter-style': ['error', {
       multiline: {

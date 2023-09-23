@@ -1,6 +1,6 @@
-export type Workspace = {
-  name: string
-  version: string
-}
+export type HealthResponse = {
+  status: string;
+};
 
-export * from './user';
+export * from './auth';
+export * from './users';

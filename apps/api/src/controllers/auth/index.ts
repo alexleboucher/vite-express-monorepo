@@ -2,9 +2,9 @@ import type { NextFunction, Request, Response } from 'express';
 import type { HttpError } from 'http-errors';
 import createHttpError from 'http-errors';
 import passport from 'passport';
+import type { AuthLoginBody, AuthLoginResponse } from '@internal/types';
 
 import type { User } from '../../entities/user';
-import type { AuthLoginBody, AuthLoginResponse } from '../../types/routes/auth';
 import { validateLoginBody } from './validators';
 
 const login = (
