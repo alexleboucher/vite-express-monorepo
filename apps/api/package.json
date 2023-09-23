@@ -44,6 +44,7 @@
   "devDependencies": {
     "@internal/types": "*",
     "eslint-config-custom": "*",
+    "@internal/tsconfig": "*",
 
     "@types/bcryptjs": "^2.4.2",
     "@types/connect-pg-simple": "^7.0.0",

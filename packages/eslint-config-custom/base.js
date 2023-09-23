@@ -28,7 +28,7 @@ module.exports = {
     '@typescript-eslint/consistent-type-imports': ['error', { prefer: 'type-imports' }],
     '@typescript-eslint/no-floating-promises': 'error',
     '@typescript-eslint/semi': ['error'],
-    '@typescript-eslint/no-unused-vars': ['warn', { argsIgnorePattern: 'req|res|next|err' }],
+    '@typescript-eslint/no-unused-vars': ['warn'],
     '@typescript-eslint/member-delimiter-style': ['error', {
       multiline: {
           delimiter: 'semi',
