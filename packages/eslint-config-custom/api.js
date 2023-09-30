@@ -17,7 +17,7 @@ module.exports = {
     },
   },
   env: { node: true, es2020: true },
-  ignorePatterns: ['build', '.eslintrc.js', 'src/migrations'],
+  ignorePatterns: ['build', '.eslintrc.js', 'src/migrations', 'jest.config.ts'],
   rules: {
     ...base.rules,
     '@typescript-eslint/no-unused-vars': ['warn', { argsIgnorePattern: 'req|res|next|err' }],

@@ -24,7 +24,7 @@ module.exports = {
   },
   env: { browser: true, es2020: true },
   ignorePatterns: ['dist', '.eslintrc.js', 'vite.config.ts'],
-  plugins: ['react', 'react-refresh', '@arthurgeron/react-usememo'],
+  plugins: [...base.plugins, 'react', 'react-refresh', '@arthurgeron/react-usememo'],
   extends: [
     ...base.extends,
     'plugin:react/recommended',
