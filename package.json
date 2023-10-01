@@ -13,6 +13,7 @@
     "type-check": "turbo run type-check",
     "lint": "turbo run lint",
     "lint:fix": "turbo run lint:fix",
+    "test": "dotenv -e .env.test -- turbo run test",
     "docker:up": "docker-compose up -d && yarn docker:shell",
     "docker:down": "docker-compose down",
     "docker:shell": "docker exec -it turbo sh",

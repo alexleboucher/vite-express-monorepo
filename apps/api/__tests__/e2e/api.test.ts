@@ -20,7 +20,7 @@ describe('API', () => {
         const res = await request(server).get('/api/health');
 
         expect(res.statusCode).toEqual(200);
-        expect(res.text).toEqual('Server is up!');
+        expect(res.body.status).toEqual('Server is up!');
     });
 
     test('Send 404 if route does not exist', async () => {

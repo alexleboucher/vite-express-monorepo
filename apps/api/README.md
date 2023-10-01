@@ -226,7 +226,6 @@ The route prefix is `/api` by default, but you can change this in the .env file.
 | **src/routes/**                             | REST API Routes |
 | **src/routes/[feature].ts**                 | Feature routes |
 | **src/subscribers/**                        | Entity subscribers |
-| **src/types/**                              | Typescript types |
 | **src/utils/**                              | Utils functions |
 | **src/data-source.ts**                      | TypeORM data source |
 | **src/index.ts**                            | REST API entry point |
