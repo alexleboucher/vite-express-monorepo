@@ -2,7 +2,8 @@
   "globalDotEnv": [".env"],
   "pipeline": {
     "dev": {
-      "cache": false
+      "cache": false,
+      "persistent": true
     },
     "type-check": {
       "outputs": []
@@ -20,6 +21,20 @@
     "build": {
       "dependsOn": ["type-check", "lint"],
       "outputs": ["build/**", "dist/**"]
+    },
+    "migration:run": {
+      "outputs": [],
+      "cache": false
+    },
+    "migration:generate": {
+      "outputs": [],
+      "cache": false
+    },
+    "migration:revert": {
+      "outputs": []
+    },
+    "migration:create": {
+      "outputs": []
     }
   }
 }
