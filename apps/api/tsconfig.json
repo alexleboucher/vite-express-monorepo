@@ -4,7 +4,6 @@
     "types": ["node", "jest"],
     "module": "commonjs",
     "sourceMap": true,
-    "noUnusedParameters": false,
     "outDir": "build",
   },
   "include": ["src/**/*", "__tests__/**/*"],
