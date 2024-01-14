@@ -10,9 +10,9 @@ services:
     working_dir: /app
     volumes:
       - ./:/app
-      - node_modules:/app/node_modules/
-      - node_modules:/app/apps/api/node_modules/
-      - node_modules:/app/apps/web/node_modules/
+      # - node_modules:/app/node_modules/ -- Needed only for windows
+      # - node_modules:/app/apps/api/node_modules/ -- Needed only for windows
+      # - node_modules:/app/apps/web/node_modules/ -- Needed only for windows
     stdin_open: true 
     tty: true
 
@@ -38,4 +38,4 @@ services:
 
 volumes:
   data:
-  node_modules:
+  # node_modules: -- Needed only for windows

@@ -17,7 +17,7 @@
     "docker:up": "docker-compose up -d && yarn docker:shell",
     "docker:down": "docker-compose down",
     "docker:shell": "docker exec -it turbo sh",
-    "docker:build": "docker build -t vite_express_monorepo .",
+    "docker:build": "docker build -t vite_express_monorepo_api .",
     "migration:run": "dotenv -- turbo run migration:run",
     "migration:revert": "dotenv -- turbo run migration:revert",
     "migration:generate": "sh -c 'dotenv -- turbo run migration:generate -- $0'",
