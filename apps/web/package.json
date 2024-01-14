@@ -2,6 +2,7 @@
   "name": "web",
   "private": true,
   "version": "1.0.0",
+  "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
@@ -11,17 +12,17 @@
     "type-check": "tsc --noEmit"
   },
   "dependencies": {
-    "axios": "^1.5.1",
+    "axios": "^1.6.5",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
   "devDependencies": {
     "@internal/tsconfig": "*",
     "@internal/types": "*",
-    "@types/react": "^18.2.24",
-    "@types/react-dom": "^18.2.8",
-    "@vitejs/plugin-react": "^4.1.0",
+    "@types/react": "^18.2.47",
+    "@types/react-dom": "^18.2.18",
+    "@vitejs/plugin-react": "^4.2.1",
     "eslint-config-custom": "*",
-    "vite": "^4.4.5"
+    "vite": "^5.0.11"
   }
 }
